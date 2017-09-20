@@ -1,0 +1,39 @@
+﻿@model IEnumerable<StoreWebApp.Data.Group>
+@{
+    ViewBag.Title = "Catalog Page";
+    ViewBag.InitModule = "catalogIndex";
+}
+@section Scripts {
+    <script src="~/js/catalog-index.js"></script>
+    @*<script src="~/js/catalog-index.min.js"></script>*@
+}
+
+<div>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="well sidebar-nav catalogmenu">
+                    <ul class="nav nav-list">
+                        <li class="nav-header">@Terms.Resources.Catalog</li>
+                        @foreach (var item in Model)
+                        {
+                            <li><a href="@item.Link">@item.Title</a></li>
+                        }
+                        
+                    </ul>
+                </div>
+                <!--/.well -->
+            </div>
+            <!--/span-->
+
+            <div data-ng-view=""></div>
+
+        </div>
+        <!--/row-->
+
+        <hr>
+    </div>
+
+</div>
+

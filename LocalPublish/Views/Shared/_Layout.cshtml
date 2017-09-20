@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="@ViewBag.InitModule">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Интернет магазин одежды">
+    <meta name="keywords" content="Интернет магазин одежды">
+
+    <!-- HTML5 Support for IE -->
+    <!--[if lt IE 9]>
+  <script src="~/scripts/html5shim.js"></script>
+  <![endif]-->
+
+    <!-- Google Web Font -->
+    <link href='http://fonts.googleapis.com/css?family=Dosis:200,400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Stylesheets -->
+    <link href="~/Content/Template/style/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Template/style/font-awesome.css">
+    <!--[if IE 7]>
+  <link rel="stylesheet" href="~/Content/Template/style/font-awesome-ie7.css">
+  <![endif]-->
+
+    <link href="~/Content/Template/style/ddlevelsmenu-base.css" rel="stylesheet">
+    <link href="~/Content/Template/style/ddlevelsmenu-topbar.css" rel="stylesheet">
+    <link href="~/Content/Template/style/style.css" rel="stylesheet">
+    <!-- Change the template color below. Supported colors blue,red and green. -->
+    <link href="~/Content/Template/style/blue.css" rel="stylesheet">
+    <link href="~/Content/Template/style/bootstrap-responsive.css" rel="stylesheet">
+    <link href="~/Content/Template/style/flexslider.css" rel="stylesheet">
+    <link href="~/Content/Template/style/prettyPhoto.css" rel="stylesheet">
+
+    <!-- Our Custom Styles -->
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="~/favicon.ico">
+</head>
+
+<body>
+
+    
+    <!-- Header -->
+
+    <div class="fixedbar">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="logo">
+                        <div class="pull-left">
+                            <h1><a href="#"><i class="icon-shopping-cart"></i>Elendress</a></h1>
+                        </div>
+                        <div class="navi">
+                            <!-- Navigation Starts Here -->
+                            <div class="pull-left">
+                                <div id="ddtopmenubar" class="mattblackmenu">
+                                    <!-- Main navigation -->
+                                    <ul>
+                                        <li>@Html.ActionLink(Terms.Resources.MainMenuHome, "Index", "Home")</li>
+                                        <li>@Html.ActionLink(Terms.Resources.MainMenuCatalog, "Index", "Catalog")</li>
+                                        <li>@Html.ActionLink(Terms.Resources.MainMenuForum, "Index", "Forum")</li>
+                                        <li>@Html.ActionLink(Terms.Resources.MainMenuContact, "Contact", "Home")</li>
+                                        <li>@Html.ActionLink(Terms.Resources.MainMenuAbout, "About", "Home")</li>
+                                        
+                                        @if (Request.IsAuthenticated)
+                                        {
+                                            <li>@Html.ActionLink(Terms.Resources.MainMenuModerate, "Moderate", "Home")</li>
+                                        }
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Navigation Ends Here -->
+                        </div>
+                    </div>
+                    <div class="share">
+                        <div class="pull-right">
+                            <!-- Share it link for slider -->
+                            @*  <p><a href="#" class="open"><span class="hidden-phone">@Terms.Resources.Basket</span> <i class="icon-share"></i></a></p>*@
+                            <section id="login" class="loginsection">
+                                @Html.Partial("_LoginPartial")
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="span12 hidden-desktop">
+                    <div class="padd">
+                        <div class="navis"></div>
+                    </div>
+                </div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="foot-fixed-bottom">
+            <div class="container">
+                © atk • Kharkiv 2014
+                <div class="pull-right">
+                    <span class="label label-info">@Html.ActionLink("?", "Info", "Home")</span>
+                    </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="~/Scripts/jquery-2.0.2.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/scripts/easing.js"></script>
+    <script src="~/scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="~/scripts/ddlevelsmenu.js"></script>
+    <script type="text/javascript" src="~/scripts/flexslider.js"></script>
+    <script type="text/javascript" src="~/scripts/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="~/scripts/custom.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

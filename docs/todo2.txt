@@ -1,0 +1,2 @@
+1. display text if group or subitems are empty
+2. multy lang site and lang selector needed

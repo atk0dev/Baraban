@@ -1,0 +1,114 @@
+﻿<a href="#/" class="btn">Back</a>
+<div>
+    <div class="message row">
+
+        <form name="editItemForm" novalidate data-ng-submit="editItem()">
+
+            <div class="row">
+                <div class="span1 offset5">
+                    ID {{ item.id }}
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="span7">
+
+
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="title">Title</label>
+                        </div>
+                        <div class="span3">
+                            <input name="title" type="text" data-ng-model="item.title" required data-ng-minlength="5" />
+                            <span class="error" data-ng-show="editItemForm.title.$error.required">*</span>
+                        </div>
+                        <div class="span1">
+                            <span class="error" data-ng-show="editItemForm.title.$error.minlength">Minimum 5</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="groupId">Group Id</label>
+                        </div>
+                        <div class="span3">
+                            <input name="groupId" type="number" data-ng-model="item.groupId" required />
+                            <span class="error" data-ng-show="editItemForm.groupId.$error.required">*</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="itemImage">Image</label>
+                        </div>
+                        <div class="span3">
+                            <input name="itemImage" type="text" data-ng-model="item.image" required data-ng-minlength="5" />
+                            <span class="error" data-ng-show="editItemForm.image.$error.required">*</span>
+                        </div>
+                        <div class="span1">
+                            <span class="error" data-ng-show="editItemForm.image.$error.minlength">Minimum 5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="price">Price</label>
+                        </div>
+                        <div class="span3">
+                            <input name="price" type="number" data-ng-model="item.price" required />
+                            <span class="error" data-ng-show="editItemForm.price.$error.required">*</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span5">
+                    <div>
+                        <label for="descr">Description</label>
+                        <textarea name="descr" rows="5" cols="30" data-ng-model="item.descr" required data-ng-minlength="15" />
+                        <span class="error" data-ng-show="editItemForm.descr.$error.required">*</span>
+                        <span class="error" data-ng-show="editItemForm.descr.$error.minlength">Minimum 15 Characters</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="span3">
+                    <input type="submit" class="btn" value="Save" data-ng-disabled="editItemForm.$invalid" />
+                </div>
+
+                <div class="span3">
+                    <a href="#/item/{{ item.id }}/delete" class="btn">Delete</a>
+                </div>
+
+                <div class="span3">
+                    <a href="#/item/{{ item.id }}/newdetail" class="btn">Add Item</a>
+                </div>
+
+            </div>
+        </form>
+
+        <div class="span12">
+            <div class="reply" data-ng-repeat="r in item.details">
+                <div class="row">
+                    <div class="span1">
+                        ID {{ r.id }}
+                    </div>
+                    <div class="title span2">
+                        <a data-ng-href="#/detail/{{ item.id }}/edit/{{ r.id }}">{{ r.title }}</a>
+                    </div>
+                    <div class="span2">
+                        Image {{ r.image }}
+                    </div>
+                    
+                    <div class="span1">
+                        <a href="#/detail/{{ r.id }}/delete" class="btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>

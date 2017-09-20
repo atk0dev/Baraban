@@ -1,0 +1,51 @@
+﻿@model StoreWebApp.Models.InfoModel
+
+@{
+    ViewBag.Title = "Info";
+}
+
+<div class="row">
+    <p class="lead">@ViewBag.Message</p>
+</div>
+
+
+<div class="row">
+    <div class="span3 offset3">
+        <div>
+            <ul class="unstyled">
+                <li>
+                    <p>Mode: @Model.Mode</p>
+                </li>
+                <li>
+                    <p>Version: @Model.Version</p>
+                </li>
+                
+                <li>
+                    <div>
+                        User:
+                    
+                        @if (Request.IsAuthenticated)
+                        {
+                            <span>@User.Identity.Name</span>
+                            <span>(Role: </span>
+                            if (User.IsInRole("admin"))
+                            {
+                                <span>admin</span>
+                            }
+                            else
+                            {
+                                <span>not admin</span>
+                            }
+                            <span>)</span>
+                        }
+                        else
+                        {
+                            <span>Not authenticated</span>
+                        }
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

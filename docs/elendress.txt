@@ -1,0 +1,13 @@
+Username: 0026835
+e: tkmail@bk.ru
+p: elendressadmin2013
+
+db user pass: POIq1w2e3r4!0987654321
+
+
+FTP
+ftp://ftp.elendress.com
+u: elendres
+p: elendressadmin2013
+
+connectionString="Data Source=tcp:s07.winhost.com;Initial Catalog=DB_61948_showcaseed;User ID=DB_61948_showcaseed_user;Password=POIq1w2e3r4!0987654321;Integrated Security=False;"

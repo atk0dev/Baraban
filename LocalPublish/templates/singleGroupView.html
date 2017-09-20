@@ -1,0 +1,131 @@
+﻿<a href="#/" class="btn">Back</a>
+<div>
+    <div class="message row">
+
+        <form name="editGroupForm" novalidate data-ng-submit="editGroup()">
+
+            <div class="row">
+                <div class="span1 offset5">
+                    ID {{ group.id }}
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="span7">
+
+
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="title">Title</label>
+                        </div>
+                        <div class="span3">
+                            <input name="title" type="text" data-ng-model="group.title" required data-ng-minlength="5" />
+                            <span class="error" data-ng-show="editGroupForm.title.$error.required">*</span>
+                        </div>
+                        <div class="span1">
+                            <span class="error" data-ng-show="editGroupForm.title.$error.minlength">Minimum 5</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="showOrder">Show Order</label>
+                        </div>
+                        <div class="span3">
+                            <input name="showOrder" type="number" data-ng-model="group.showOrder" required />
+                            <span class="error" data-ng-show="editGroupForm.showOrder.$error.required">*</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="link">Link</label>
+                        </div>
+                        <div class="span3">
+                            <input name="link" type="text" data-ng-model="group.link" required data-ng-minlength="5" />
+                            <span class="error" data-ng-show="editGroupForm.link.$error.required">*</span>
+                        </div>
+                        <div class="span1">
+                            <span class="error" data-ng-show="editGroupForm.link.$error.minlength">Minimum 5</span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="span1 offset1">
+                            <label for="grVisible">Visible</label>
+                        </div>
+                        <div class="span3">
+                            <input name="grVisible" type="checkbox" data-ng-model="group.visible"> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="span5">
+                    <div>
+                        <label for="body">Body</label>
+                        <textarea name="body" rows="5" cols="30" data-ng-model="group.body" required data-ng-minlength="15" />
+                        <span class="error" data-ng-show="editGroupForm.body.$error.required">*</span>
+                        <span class="error" data-ng-show="editGroupForm.body.$error.minlength">Minimum 15 Characters</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="span3">
+                    <input type="submit" class="btn" value="Save" data-ng-disabled="editGroupForm.$invalid" />
+                </div>
+
+                <div class="span3">
+                    <a href="#/group/{{ group.id }}/delete" class="btn">Delete</a>
+                </div>
+
+                <div class="span3">
+                    <a href="#/group/{{ group.id }}/newitem" class="btn">Add Item</a>
+                </div>
+
+            </div>
+        </form>
+
+        <div class="span12">
+            <div class="reply" data-ng-repeat="r in group.items">
+                <div class="row">
+                    <div class="span1">
+                        ID {{ r.id }}
+                    </div>
+                    <div class="title span2">
+                        <a data-ng-href="#/group/{{ group.id }}/edit/{{ r.id }}">{{ r.title }}</a>
+                    </div>
+                    <div class="span1">
+                        Price {{ r.price }}
+                    </div>
+                    <div class="span2">
+                        Image {{ r.image }}
+                    </div>
+                    <div class="span4">
+                        Description {{ r.descr }}
+                    </div>
+                    <div class="span1">
+                        <a href="#/item/{{ r.id }}/delete" class="btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<h3>Add Reply</h3>
+  <form name="newReplyForm" novalidate data-ng-submit="addReply()">
+    <fieldset>
+      <div>
+        <label for="body">Body</label>
+        <textarea name="body" rows="5" cols="30" data-ng-model="newReply.body" required data-ng-minlength="15" />
+        <span class="error" data-ng-show="newReplyForm.body.$error.required">*</span>
+        <span class="error" data-ng-show="newReplyForm.body.$error.minlength">Minimum 15 Characters</span>
+      </div>
+      <div>
+        <input type="submit" class="btn" value="Save" data-ng-disabled="newReplyForm.$invalid" />
+      </div>
+    </fieldset>
+  </form>-->
+</div>

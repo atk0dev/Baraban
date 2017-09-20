@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ShowcaseED.Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>WinKAS Mobile Uploaded Images</title>
+    <script type="text/javascript" src="Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.fancybox.pack.js"></script>
+
+    <script type="text/javascript" src="Scripts/../Scripts/jquery.imgpreload.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Content/jquery.fancybox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Content/storewebapp.css" />
+    
+    <link rel="stylesheet" href="Content/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="Scripts/jquery.fancybox-buttons.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.fancybox-media.js"></script>
+    
+
+
+    <script type="text/javascript" src="Scripts/storewebapp.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderTop" runat="server">
+        </asp:ContentPlaceHolder>
+        
+        <div class="gallery_container_main">
+            <table>
+                <tr>
+                    <td style="vertical-align: top">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolderRight" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>
+                        <asp:Label runat="server" ForeColor="#555">Tkach</asp:Label>
+                    </td>
+                    <td style="vertical-align: top">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

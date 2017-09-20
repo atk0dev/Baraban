@@ -1,0 +1,34 @@
+﻿<div class="span9">
+    <div class="jumbotron">
+        <h1>{{ item.title }}</h1>
+        <div>
+            {{ item.descr }}
+        </div>
+    </div>
+    
+    <div class="row">
+        <a data-ng-href="#/group/{{ cg }}" class="btn">Назад</a>    
+    </div>
+
+    <div class="row">
+    <div class="progress progress-striped active" data-ng-show="isBusy">
+        <div class="bar" style="width: 100%;"></div>
+    </div>    
+    </div>
+
+    <div class="row">
+    <!--<div class="row-fluid" data-ng-repeat="r in data.rows">-->
+    <div class="span4" data-ng-repeat="i in  details">
+        <h2>{{ i.title }}</h2>
+        <img src="{{ i.image }}" />
+
+    </div>
+    <!--</div>-->
+        <!--/row-->
+        </div>
+
+</div>
+<!--/span-->
+
+
+

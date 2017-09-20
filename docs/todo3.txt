@@ -1,0 +1,5 @@
+1 - при переводе нужно что бы переводились не только название и размеры, а и описание, доставка и т.д.( это перспектива).  translation of name, sizes, description, delivery... all items in catalog should be available for translations
+2- обязательна у нас сортировка по цене, ordering by price
+3 - понравилось увеличительное окошко (zoom), zooming of big item in catalog
+4- нужно гдето вставить таблицу размеров, display table with sizes
+5 - сделать show order по каждому товару, чтобы можно было перемещать товар внутри каталога. show orded for each item in the catalog. it should be possible to move items on the catalog page

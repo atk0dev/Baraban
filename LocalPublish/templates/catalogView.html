@@ -1,0 +1,26 @@
+﻿<div class="span9">
+    <div class="jumbotron">
+        <h1>{{ data.currGroup.title }}</h1>
+        <p>{{ data.currGroup.body }}</p>
+        
+    </div>
+
+    <div class="progress progress-striped active" data-ng-show="isBusy">
+        <div class="bar" style="width: 100%;"></div>
+    </div>
+
+    <div class="row-fluid" data-ng-repeat="r in data.rows">
+        <div class="span4" data-ng-repeat="i in r">
+            <h2>{{ i.title }}</h2>
+            <a href="#/group/{{ i.groupId }}/item/{{ i.id }}"> <img src="{{ i.image }}" /> </a>
+            <p>{{ i.descr }}</p>
+            <p><span>Price: </span>{{i.price}} </p>
+            <p><a class="btn" data-ng-href="#/group/{{ i.groupId }}/item/{{ i.id }}">Подробнее</a></p>
+        </div>
+        <!--/span-->
+    </div>
+    <!--/row-->
+
+</div>
+<!--/span-->
+

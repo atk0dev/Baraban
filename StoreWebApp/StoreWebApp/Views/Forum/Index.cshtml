@@ -1,0 +1,10 @@
+﻿@model IEnumerable<StoreWebApp.Data.Topic>
+@{
+  ViewBag.Title = "Forum Page";
+  ViewBag.InitModule = "forumIndex";
+}
+@section Scripts {
+  <script src="~/js/forum-index.min.js"></script>
+}
+
+<div data-ng-view=""></div>

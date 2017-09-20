@@ -1,0 +1,38 @@
+﻿<h3>New Group</h3>
+<form name="newGroupForm" novalidate data-ng-submit="save()">
+    <fieldset>
+        
+        <div>
+            <label for="title">Title</label>
+            <input name="title" type="text" data-ng-model="newGroup.title" required data-ng-minlength="5" />
+            <span class="error" data-ng-show="newGroupForm.title.$error.required">*</span>
+            <span class="error" data-ng-show="newGroupForm.title.$error.minlength">Minimum 5 Characters</span>
+        </div>
+
+        <div>
+            <label for="body">Body</label>
+            <textarea name="body" rows="5" cols="30" data-ng-model="newGroup.body" required data-ng-minlength="15" />
+            <span class="error" data-ng-show="newGroupForm.body.$error.required">*</span>
+            <span class="error" data-ng-show="newGroupForm.body.$error.minlength">Minimum 15 Characters</span>
+        </div>
+        
+        <div>
+            <label for="link">Link</label>
+            <input name="link" type="text" data-ng-model="newGroup.link" required data-ng-minlength="5" />
+            <span class="error" data-ng-show="newGroupForm.link.$error.required">*</span>
+            <span class="error" data-ng-show="newGroupForm.link.$error.minlength">Minimum 5 Characters</span>
+        </div>
+        
+        <div>
+            <label for="showOrder">Show Order</label>
+            <input name="showOrder" type="number" data-ng-model="newGroup.showOrder" required />
+            <span class="error" data-ng-show="newGroupForm.showOrder.$error.required">*</span>
+        </div>
+
+        <div>
+            <input type="submit" class="btn" value="Save" data-ng-disabled="newGroupForm.$invalid" />
+            <a href="#/" class="btn">Cancel</a>
+        </div>
+
+    </fieldset>
+</form>

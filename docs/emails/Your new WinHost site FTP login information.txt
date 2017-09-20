@@ -1,0 +1,56 @@
+
+Subject:
+Your new WinHost site FTP login information
+From:
+"WinHost" <support@winhost.com>
+Date:
+16.07.2013 22:59
+To:
+"Andrey Tkach" <tkmail@bk.ru>
+
+Dear Andrey Tkach,
+
+Your new site, elendress.com, is now provisioned. 
+
+You may log in to Control Panel (https://cp.WinHost.com/) to get information regarding email account set up and much more. 
+
+If you wish to upload files before your domain name registration is active or your name server updates propagate, you can use the Secondary FTP login. FTP login information is located in the "Site Info" section of Control Panel. 
+
+Your FTP username and password are:
+
+Username:	elendres
+Password:	[Your Control Panel password]
+
+----------
+
+GETTING STARTED
+
+We have created three "getting started" tutorials in our Knowledge Base. They outline the different functions in Control Panel, and help you get a feel for where tools and information are located.
+
+- Getting Started with your WinHost site - Control Panel tutorial
+    http://support.winhost.com/KB/a712/getting-started-with-your-winhost-site-control-panel.aspx
+- Control Panel Site Manager tutorial (Site Info)
+    http://support.winhost.com/KB/a713/control-panel-site-manager-tutorial-site-info.aspx
+- Control Panel Site Manager tutorial (Site Tools)
+    http://support.winhost.com/KB/a714/control-panel-site-manager-tutorial-site-tools.aspx
+
+----------
+
+COMMUNITY FORUM
+
+You can access the community forum at: http://forum.winhost.com
+
+----------
+
+If you have any questions or comments, contact support at http://support.winhost.com.
+
+Thank you for using WinHost!
+
+To keep up to date with WinHost, follow us! 
+
+Google+: http://googleplus.winhost.com
+Twitter: http://twitter.winhost.com
+Facebook: http://facebook.winhost.com
+
+
+

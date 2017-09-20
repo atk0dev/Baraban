@@ -1,0 +1,48 @@
+﻿<div>
+    <div>
+        <h1>Groups</h1>
+        <p class="lead">Groups in the main menu</p>
+        <div>Groups Count: {{ data.groups.length }}</div>
+    </div>
+
+    <div>
+        <a href="#/newgroup">Add New Group</a>
+    </div>
+    
+    <div class="progress progress-striped active" data-ng-show="isBusy">
+        <div class="bar" style="width: 100%;"></div>
+    </div>
+
+    <div>
+        <div class="message row" data-ng-repeat="i in data.groups">
+            <div class="span1">
+                ID {{ i.id }}
+            </div>
+            
+            <div class="title span3">
+                <a data-ng-href="#/group/{{ i.id }}">{{ i.title }}</a>
+            </div>
+            
+            <div class="span1">
+                Order {{ i.showOrder }}
+            </div>
+            
+            <div class="span1">
+                Visible
+                <div data-ng-show="i.visible">YES</div>
+            </div>
+            
+            <div class="span3">
+                Link {{ i.link }}
+            </div>
+            
+            <div class="span2">
+                <a href="#/group/{{ i.id }}/delete" class="btn">Delete</a>
+            </div>
+
+            <div class="span12">
+                {{ i.body }}
+            </div>
+        </div>
+    </div>
+</div>

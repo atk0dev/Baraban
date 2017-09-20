@@ -1,0 +1,7 @@
+mobile applications
+1. Mobile app with all catalog. No auth.
+2. Upload photo to the forum. Hey, look how nice this dress is. I'd like to have the same. Auth here
+
+website improvements
+1. Few images (5) to the main page with links to the full item description.
+2. Some adv text to the top of the main page
